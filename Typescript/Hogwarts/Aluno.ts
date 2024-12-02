@@ -1,9 +1,9 @@
 export class Aluno{
-    nome: string
-    idade: number
-    nacionalidade: string
-    casa: string|null
-    classeMagica: string
+    private nome: string
+    private idade: number
+    private nacionalidade: string
+    private casa: string|null
+    private classeMagica: string
     constructor(nome: string,idade: number,nacionalidade: string){
         this.nome = nome
         this.idade = idade
@@ -47,7 +47,7 @@ export class Aluno{
         this.classeMagica = classeMagica
     }
 
-    sortearCasa(){
+    private sortearCasa(){
         let sortear: Array<string> = ["Gryffindor","Hufflepuff","Ravenclaw","Slytherin"]
         let sorteioCasas: string = sortear[Math.floor(Math.random() * sortear.length)]
 
